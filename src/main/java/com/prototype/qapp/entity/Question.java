@@ -18,4 +18,8 @@ public class Question {
     private String title;
     private String description;
     private String category;
+
+    public Long getQuestionId() {
+        return id;
+    }
 }
