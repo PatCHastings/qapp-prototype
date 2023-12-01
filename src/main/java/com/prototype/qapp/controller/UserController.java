@@ -28,7 +28,7 @@ public class UserController {
     }
     @GetMapping("/userById/{id}")
     public User findUserById(@PathVariable  Long id) {
-        return service.getUserById(id);
+         return service.getUserById(id);
     }
     @GetMapping("/user/{name}") // This is a custom route
     public User findUserByName(@PathVariable  String name) {
