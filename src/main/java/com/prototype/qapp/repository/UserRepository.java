@@ -7,6 +7,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     // Define custom queries if needed
     // Example:
+
     User findByUserName(String userName);
 
 
