@@ -3,6 +3,7 @@ package com.prototype.qapp.entity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Data
@@ -18,8 +19,7 @@ public class Question {
     private String title;
     private String description;
     private String category;
+    @Getter
+    private Long questionId;
 
-    public Long getQuestionId() {
-        return id;
-    }
 }

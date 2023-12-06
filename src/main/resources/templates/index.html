@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React App</title>
+</head>
+<body>
+<div id="root"></div> <!-- This is the React root element -->
+
+<!-- Include React and ReactDOM scripts -->
+<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+<!-- Include your React component(s) -->
+<script th:inline="javascript">
+    // Define your React component
+    class App extends React.Component {
+        render() {
+            return (
+                <div>
+                    <h1>Hello, React!</h1>
+                    <!-- You can render React components here -->
+                </div>
+            );
+        }
+    }
+
+    // Render your React component into the 'root' element
+    ReactDOM.render(<App />, document.getElementById('root'));
+</script>
+</body>
+</html>
