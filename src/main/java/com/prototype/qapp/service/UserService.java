@@ -14,6 +14,8 @@ public class UserService {
     private UserRepository repository;
 
     public User registerUser(User user) {
+        user.setUserName(user.getUserName());
+        user.setSID(user.getSID());
         return repository.save(user);
     }
     public List<User> saveUsers(List<User> users) {
@@ -40,4 +42,7 @@ public class UserService {
         return repository.save(existingUser);
     }
 
+    public User getUserBySID(String SID) {
+        return repository.findBySID(SID);
+    }
 }

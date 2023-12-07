@@ -21,6 +21,7 @@ public class User {
     private Long id;
     private String userName;
     private String displayName;
+    private String SID;
     //private int points;
     //private boolean isAnonymous;
     // Relationship Mapping

@@ -10,6 +10,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     User findByUserName(String userName);
 
+    User findBySID(String SID);
 
 
     // You can also add more specific query methods as per your application's requirements
