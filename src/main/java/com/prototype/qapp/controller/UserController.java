@@ -17,10 +17,10 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/register")
-    public ResponseEntity<?> registerUser(@RequestBody User user) {
+    public ResponseEntity<?> registerUser(@RequestBody User userName) {
         try {
             // Validate and save the user registration data
-            userService.registerUser(user);
+            userService.registerUser(userName);
             return ResponseEntity.ok().build();
         } catch (Exception e) {
             // Handle any exceptions (e.g., duplicate SID) and return an error response
