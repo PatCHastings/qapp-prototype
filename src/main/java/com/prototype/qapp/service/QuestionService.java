@@ -33,4 +33,10 @@ public class QuestionService {
     public Question createQuestion(Question question) {
         return question;
     }
+
+    public Question addAnswerToQuestion(Long questionId, Long answerId) {
+        Question question = repository.findById(questionId).orElse(null);
+        question.setAnswerId(answerId);
+        return repository.save(question);
+    }
 }

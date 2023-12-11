@@ -27,6 +27,11 @@ public class QuestionController {
         return questionService.submitQuestion(question);
     }
 
+    @PostMapping("/addAnswerToQuestion/{questionId}/{answerId}")
+    public Question addAnswerToQuestion(@PathVariable Long questionId, @PathVariable Long answerId) {
+        return questionService.addAnswerToQuestion(questionId, answerId);
+    }
+
 //    @GetMapping("/getsQuestions")
 //    public ResponseEntity<List<Question>> GetsQuestions() {
 //        List<Question> questions = questionService.GetQuestions();

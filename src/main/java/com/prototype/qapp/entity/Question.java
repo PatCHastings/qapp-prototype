@@ -22,4 +22,7 @@ public class Question {
     @Getter
     private Long questionId;
 
+    public void setAnswerId(Long answerId) {
+        this.questionId = answerId;
+    }
 }

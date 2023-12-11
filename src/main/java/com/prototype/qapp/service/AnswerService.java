@@ -26,4 +26,7 @@ public class AnswerService {
     }
 
 
+    public Iterable<Answer> getAnswers() {
+        return answerRepository.findAll();
+    }
 }

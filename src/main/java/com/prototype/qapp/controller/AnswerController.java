@@ -20,4 +20,9 @@ public class AnswerController {
         answer.setCreatedAt(new Date());
         return answerService.submitAnswer(answer);
     }
+
+    @GetMapping ("/getAnswers")
+    public Iterable<Answer> getAnswers() {
+        return answerService.getAnswers();
+    }
 }
