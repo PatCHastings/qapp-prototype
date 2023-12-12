@@ -1,8 +1,6 @@
 package com.prototype.qapp.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,4 +18,12 @@ public class Answer {
     private String response;
     private Date createdAt;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+
+    public void setUser(User currentUser) {
+        this.user = currentUser;
+    }
 }
