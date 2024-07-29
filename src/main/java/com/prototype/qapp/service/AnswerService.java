@@ -25,6 +25,9 @@ public class AnswerService {
         return answerRepository.findById(id).orElse(null);
     }
 
+    public Answer GetCurrentUserSID(String SID) {
+        return answerRepository.findBySID(SID);
+    }
 
     public Iterable<Answer> getAnswers() {
         return answerRepository.findAll();

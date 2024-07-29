@@ -17,6 +17,7 @@ public class Answer {
     private Long id;
     private String response;
     private Date createdAt;
+    private String SID;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -25,5 +26,9 @@ public class Answer {
 
     public void setUser(User currentUser) {
         this.user = currentUser;
+    }
+
+    public void setCreatedAt(Date date) {
+        this.createdAt = date;
     }
 }
